@@ -1,6 +1,6 @@
 import argparse
 
-from python_project1.services import get_random_poem, declaim
+from cuizhanming_python_project1.services import get_random_poem, declaim
 
 def main():
     parser = argparse.ArgumentParser()

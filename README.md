@@ -1,9 +1,10 @@
 
-# Dependency Management
+## Dependency Management
 
-I am using `poetry` a modern Python tool. 
+I choose to use `Poetry` a modern Python dependency management tool. 
+[Following this tutorial](https://www.twilio.com/en-us/blog/introduction-python-dependency-management-poetry-package)
 
-## Commands for developing this project: 
+### Commands for developing this project: 
 
 ```shell
 # Create a python project with poetry-managed dependencies
@@ -35,12 +36,15 @@ poetry install
 
 # Apply poetry to existing non-poetry project
 poetry init
-poetry env use python3
+# Apply different Python version for the virtual environment
+poetry env use python3.7
 poetry env list
+# Generate a requirements.txt
+poetry export > requirements.txt
 
 ```
 
-## Commands for build and publish this project
+### Commands for build and publish this project
 
 ```shell
 poetry build
@@ -50,3 +54,4 @@ poetry config pypi-token.pypi <pypi-token>
 poetry publish
 poetry publish --repository <other-than-pypi>
 ```
+

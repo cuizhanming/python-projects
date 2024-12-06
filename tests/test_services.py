@@ -1,4 +1,4 @@
-from python_project1.services import declaim
+from cuizhanming_python_project1.services import declaim
 
 class TestDeclaim:
     def test_declaim(self, capsys):

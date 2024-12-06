@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "python-project1"
-version = "0.1.0"
+name = "cuizhanming-python-project1"
+version = "0.1.1"
 description = ""
 authors = ["Z <i@cui.guru>"]
 readme = "README.md"
