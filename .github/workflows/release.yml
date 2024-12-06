@@ -56,6 +56,12 @@ jobs:
           git commit -a -m "Bump version to $CURRENT_VERSION"
           git push origin main
 
+      - name: Upload distribution artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/*
+
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
@@ -65,6 +71,7 @@ jobs:
           generateReleaseNotes: true
           tag: ${{ env.CURRENT_VERSION }}
           commit: main
+
   pypi-publish:
     needs: release
     name: upload release to PyPI
