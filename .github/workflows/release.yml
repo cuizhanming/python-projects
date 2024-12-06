@@ -65,3 +65,20 @@ jobs:
           generateReleaseNotes: true
           tag: ${{ env.CURRENT_VERSION }}
           commit: main
+  pypi-publish:
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    # Specifying a GitHub environment is optional, but strongly encouraged
+    environment: pypi
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    steps:
+      # retrieve your distributions here
+#      - name: Retrieve GitHub Release
+#        run: |
+#          RELEASE_URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/tags/${{ env.CURRENT_VERSION }} | jq -r .html_url)
+#          echo "RELEASE_URL=${RELEASE_URL}" >> $GITHUB_ENV
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
