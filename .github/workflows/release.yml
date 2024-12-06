@@ -79,7 +79,7 @@ jobs:
     # Specifying a GitHub environment is optional, but strongly encouraged
     environment:
       name: pypi
-      url: https://pypi.org/p/cuizhanming-python-project1
+      url: https://pypi.org/p/cuizhanming-python-project1/
     permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
@@ -94,6 +94,6 @@ jobs:
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          repository-url: https://pypi.org/p/cuizhanming-python-project1
+          repository-url: https://pypi.org/p/cuizhanming-python-project1/
           packages-dir: dist
 #          password: ${{ secrets.PYPI_API_TOKEN }}
