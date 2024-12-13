@@ -1,3 +1,13 @@
+## Configured homebrew installed Python3
+
+```shell
+brew install python3
+
+# Update .zprofile or .bash_profile
+export PATH="/opt/homebrew/opt/python3/libexec/bin:$PATH"
+
+brew install poetry
+```
 
 ## Dependency Management
 
