@@ -1,8 +1,11 @@
 from openai import OpenAI
+from dotenv import load_dotenv
 import os
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# loading .env file
+load_dotenv()
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_response(user_input):
@@ -25,6 +28,9 @@ def generate_response(user_input):
     return completions.choices[0].message.content
 
 def main():
+    # print(r'Hello\nworld')
+    # print('Hello\nworld')
+    # print(f'Formatted String: {"Hello"}')
     print("Welcome to Universe Facts Chatbot! (type 'exit' to quit)")
     while True:
         user_input = input("You: ")
